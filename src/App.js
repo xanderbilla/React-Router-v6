@@ -8,10 +8,6 @@ const App = () => {
     <>
       <Navbar/>
     <Routes>
-      {/* For each <Route> we pass two props i.e., path and element.
-      + In 'path' we specify the URL for the component.
-      + In 'element' we specify the component need to be rendered at that specific path.
-    */}
       <Route path='/' element={<Home />} />
       <Route path='about' element={<About />} />
     </Routes>
@@ -20,9 +16,9 @@ const App = () => {
 }
 
 /*
-For styling navbar link
+For navigating programatically
 
-~Refer to commit C3# to use Link
+~Refer to commit C4# to use Link
 */
 
 export default App
