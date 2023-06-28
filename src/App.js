@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      {/* For each <Route> we pass two props i.e., path and element.
+      + In 'path' we specify the URL for the component.
+      + In 'element' we specify the component need to be rendered at that specific path.
+    */}
+      <Route path='/' element={<Home />} />
+      <Route path='/about' element={<About />} />
+    </Routes>
+  )
 }
 
-export default App;
+/*
+This is not how regular user will navigate in application. We have a UI element called Link to which the user can click to navigate to a different route. It can also be done programtically after an action has been completed
+
+~Refer to commit C2# to use Link
+*/
+
+export default App
