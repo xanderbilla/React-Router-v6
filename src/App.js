@@ -1,9 +1,5 @@
 /*
-Nested route - React router allows us to switch between portion inside the page. 
 
-See scenario
-
-To achieve the above scenario we use Nested Routes
 */
 
 import { Routes, Route } from 'react-router-dom'
@@ -24,10 +20,11 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='about' element={<About />} />
         <Route path='order-summary' element={<OrderSummary />} />
-
-{/*1) In nested route react-router automatically form the full path for the children route. Here featured and new is a child route component with full path `/products/featured` and new is `/products/new` */}
-
         <Route path='products' element={<Products />} >
+
+          {/* In the case we want to render a child as a parent component we use index prop instead of path so that when the parent route is called by default the child component which we have configured will be rendered */}
+
+          <Route index element={<Featured />} />
           <Route path='featured' element={<Featured />} />
           <Route path='new' element={<New />} />
         </Route>
@@ -38,9 +35,9 @@ const App = () => {
 }
 
 /*
-For Index Routes
+For Dynamic Routes
 
-~Refer to commit C7# 
+~Refer to commit C8# 
 */
 
 export default App
