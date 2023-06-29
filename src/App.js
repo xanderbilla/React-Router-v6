@@ -1,5 +1,8 @@
 /*
-In the real time we need to fetch dynamic data for that particular dynamic route. So what we usually do we extract the userId and do something with that id. We make api calls using that userId  
+The useSearchParams hook is used to read and modify the query string in the URL for the current location. 
+
+Searchparams scenario img
+
 */
 
 import { Routes, Route } from 'react-router-dom'
@@ -39,9 +42,9 @@ const App = () => {
 }
 
 /*
-For Search Params
+For Relative Link
 
-~Refer to commit C10# 
+~Refer to commit C11# 
 */
 
 export default App
