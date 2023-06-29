@@ -1,5 +1,5 @@
 /*
-Let's say we are creating admin dashboard and we have a list of users at /users but when we click on each user for each user it should show individual details. FOr that we use dynamic route.
+In the real time we need to fetch dynamic data for that particular dynamic route. So what we usually do we extract the userId and do something with that id. We make api calls using that userId  
 */
 
 import { Routes, Route } from 'react-router-dom'
@@ -23,19 +23,6 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='about' element={<About />} />
         <Route path='order-summary' element={<OrderSummary />} />
-
-        {/* We can use /user/1 /user/2 ... but what if we have 100s or 1000 of users so it's not convinient to use this approach. That's where dynamic approach comes into picture
-
-        For our scenario the user id that is 1, 2 ... will be dynamic value. 
-        React will render the UserDetail component as long as the /user/:userId pattern will be match or followed
-
-        The userId can be string or number
-
-        In case let's say we have a speciifc route for specific user that is Admin then the question is which component will be rendered. And in such cases react-router try to find the exact matching route before aproaching dynamic route
-
-        Dynamic routes can be nested as well.
-      */}
-
         <Route path='users' element={<Users />} >
           <Route path=':userId' element={<UserDetail />} />
           <Route path='admin' element={<Admin />} />
@@ -52,9 +39,9 @@ const App = () => {
 }
 
 /*
-For URL Params
+For Search Params
 
-~Refer to commit C9# 
+~Refer to commit C10# 
 */
 
 export default App
