@@ -23,6 +23,13 @@ nav a{
   text-decoration: none;
 }
 
-/* nav a.active{
+nav a.active{
   font-weight: 600;
-} */
+}
+
+button{
+  padding: 4px 8px;
+  font-size: 18px;
+  background-color: azure;
+  border-radius: 2px;
+}
