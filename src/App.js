@@ -4,7 +4,6 @@ The useSearchParams hook is used to read and modify the query string in the URL 
 Searchparams scenario img
 
 */
-
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -42,9 +41,9 @@ const App = () => {
 }
 
 /*
-For Relative Link
+For Lazy Loading
 
-~Refer to commit C11# 
+~Refer to commit C12# 
 */
 
 export default App

@@ -14,12 +14,6 @@ const Users = () => {
       <Outlet />
       <div>
 
-        {/* 
-        On click on these buttons we need to remove or search param to deal with search params react router provides a hook called useSearchparams. This is similiar to useState hook behaves similar to the use state hook. Instead of  storing state in memory through it is stored in the URL. 
-        
-        This hook returns two values of which the first one is an object which we call as searchpatterns the second value returned is a function to set search params
-        */}
-
         <button onClick={() => setSearchParams({filter: 'active'})}>Active Users</button>
         <button onClick={() => setSearchParams()}>Reset Filters</button>
       </div>
